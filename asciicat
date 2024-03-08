@@ -1,0 +1,91 @@
+local r1 = "hola!"
+local r2 = "adios"
+local r3 = "que"
+local count = 0
+local dialog = "hola, soy un gato"
+local face = "･⁠ｪ⁠･"
+
+function refresh()
+print("(".. dialog .. ")")
+print("        V      ")
+print("      Λ    Λ   ")
+print("     (⁠= ".. face .."=⁠) ")
+print("     / U  U|")
+print("____________")
+print("1." .. r1)
+print("2." .. r2)
+print("3." .. r3)
+print("----------------------------------")
+end
+refresh()
+local x = io.read()
+
+
+if x == "1" or "2" or "3" then
+  count = 1
+
+  if count == 1 then
+ os.execute("clear")
+  dialog = " que tal?"
+  r1 = "bien, y tu?"
+  r2 = "quien eres?"
+  r3 = "mal >:["
+  refresh()
+    if count == 1 then 
+      count = 2
+    end
+  end
+end
+--ERROR
+x1 = io.read()
+
+
+if x1 == "1" and count == 2 then
+  count = 3
+  if count == 3  then
+ os.execute("clear")
+  dialog = " bien, que quieres hacer hoy?"
+    face = "･⁠ω⁠･⁠"
+  r1 = "ir al parque"
+  r2 = "ir a comer pizza"
+  r3 = "ir a tu casa"
+  refresh()
+    if count == 3 then
+      count = 4
+    end
+  end
+end
+
+function house()
+  print("                           / ---------")
+  print("(".. dialog .. ")        /")
+print("        V                / _____")
+print("      Λ    Λ              |     ")
+print("     (⁠= "..face.."=⁠)            /   ▓   ▓       ")
+print("     / U  U|             |        ") 
+print("____________")
+print("1." .. r1)
+print("2." .. r2)
+print("3." .. r3)
+print("----------------------------------")
+  
+end
+
+
+x2 = io.read()
+
+if x2 == "3" and count == 4 then
+  count = 5
+  if count == 5 then
+ os.execute("clear")
+  dialog = " esta es mi casa"
+    face = "･⁠ω⁠･⁠"
+  r1 = "guauu"
+  r2 = "vamos a dentro"
+  r3 = "q fea parece una chabola"
+  house()
+    if count == 5 then
+      count = 6
+    end
+  end
+end
